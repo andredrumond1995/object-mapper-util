@@ -1,12 +1,12 @@
 import { defaultTo, forEach, get, isArray, reduce, set } from "lodash";
-import { IObjectMapper } from "./interfaces/object.mapper.interface";
+import { IObjectMapperUtilRefs } from "./interfaces/object.mapper.util.interfaces";
 
-export const objectMapper = (
+export const objectMapperUtil = (
   inputObject: Object,
-  PROPERTIES_REFS: IObjectMapper[]
+  PROPERTIES_REFS: IObjectMapperUtilRefs[]
 ): Object => {
   if (!isArray(PROPERTIES_REFS)) {
-    throw `Second paramater 'PROPERTIES_REFS' must be an array of IObjectMapper`;
+    throw `Second paramater 'PROPERTIES_REFS' must be an array of IObjectMapperUtilRefs`;
   }
 
   return objectDataProcessor(inputObject, PROPERTIES_REFS);
@@ -14,11 +14,11 @@ export const objectMapper = (
 
 const objectDataProcessor = (
   inputObject: Object,
-  PROPERTIES_REFS: IObjectMapper[]
+  PROPERTIES_REFS: IObjectMapperUtilRefs[]
 ) => {
   return reduce(
     PROPERTIES_REFS,
-    (result: Object, reference: IObjectMapper): Object => {
+    (result: Object, reference: IObjectMapperUtilRefs): Object => {
       const inputValue = defaultTo(
         get(inputObject, reference.inputProp),
         reference.defaultValue

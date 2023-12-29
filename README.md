@@ -17,7 +17,7 @@ npm install object-mapper-util
 Here is a basic example of how to use the library:
 
 ```typescript
-import { objectMapper, IDataMapper } from 'object-mapper-util';
+import { objectMapperUtil, IObjectMapperUtilRefs } from 'object-mapper-util';
 
 const inputObject = {
   prop1: 42,
