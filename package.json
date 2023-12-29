@@ -6,7 +6,7 @@
     "url": "https://github.com/andredrumond1995/object-mapper-util"
   },
   "description": "The `object-mapper-util` library provides a simple function to map objects based on user-defined configurations.",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "keywords": [
     "typescript",
     "npm",
