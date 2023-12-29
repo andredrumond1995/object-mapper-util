@@ -35,15 +35,15 @@ const inputObject = {
   ]
 };
 
-const PROPERTIES_REFS: IDataMapper[] = [
+const PROPERTIES_REFS: IObjectMapperUtilRefs[] = [
   { outputProp: 'property1', valueProcessor: (value) => value * 2, inputProp: 'prop1' },
   { outputProp: 'property2', defaultValue: 'Default' },
   { outputProp: 'property3', inputProp: 'prop3' },
-  { outputProp: 'property4', inputProp: 'prop4.prop1.prop' }
+  { outputProp: 'property4', inputProp: 'prop4.prop1.prop' },
   { outputProp: 'property5', inputProp: 'prop5[0].propElement0' }
 ];
 
-const mappedObject = objectMapper(inputObject, PROPERTIES_REFS);
+const mappedObject = objectMapperUtil(inputObject, PROPERTIES_REFS);
 
 console.log(mappedObject);
 ```
