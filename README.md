@@ -46,6 +46,17 @@ const PROPERTIES_REFS: IObjectMapperUtilRefs[] = [
 const mappedObject = objectMapperUtil(inputObject, PROPERTIES_REFS);
 
 console.log(mappedObject);
+
+/*
+output:
+{
+  property1: 84,
+  property2: 'Default',
+  property3: 'Not changed value from input object',
+  property4: 'Value',
+  property5: 'element[0]'
+}
+/*
 ```
 
 
