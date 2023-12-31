@@ -7,6 +7,7 @@
   },
   "description": "The `object-mapper-util` library provides a simple function to map objects based on user-defined configurations.",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "keywords": [
     "typescript",
     "npm",
