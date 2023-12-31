@@ -1,4 +1,2 @@
-import { objectMapperUtil } from "./object.mapper.util";
-import { IObjectMapperUtilRefs } from "./interfaces/object.mapper.util.interfaces";
-
-export { objectMapperUtil, IObjectMapperUtilRefs }
+export * from './interfaces/index';
+export * from './object-mapper-util/index';

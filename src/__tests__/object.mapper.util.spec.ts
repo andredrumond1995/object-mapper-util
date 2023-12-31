@@ -1,4 +1,4 @@
-import { objectMapperUtil } from "../object.mapper.util";
+import { objectMapperUtil } from "../object-mapper-util/object.mapper.util";
 import { IObjectMapperUtilRefs } from "../interfaces/object.mapper.util.interfaces";
 
 describe("FEATURE: objectMapperUtilUtil", () => {
@@ -20,9 +20,9 @@ describe("FEATURE: objectMapperUtilUtil", () => {
 
     describe("GIVEN: PROPERTIES_REFS has references with value processor function", () => {
       describe("WHEN: objectMapperUtil is called ", () => {
-        const result = objectMapperUtil(inputObject, PROPERTIES_REFS);
+        const sut = objectMapperUtil(inputObject, PROPERTIES_REFS);
         it("THEN: it should return the mapped object", () => {
-          expect(result).toEqual({
+          expect(sut).toEqual({
             property1: 84,
             property2: "Default",
           });
@@ -46,9 +46,9 @@ describe("FEATURE: objectMapperUtilUtil", () => {
 
     describe("GIVEN: PROPERTIES_REFS has references with undefined input property value", () => {
       describe("WHEN: objectMapperUtil is called ", () => {
-        const result = objectMapperUtil(inputObject, PROPERTIES_REFS);
+        const sut = objectMapperUtil(inputObject, PROPERTIES_REFS);
         it("THEN: it should return the mapped object with default value for the property", () => {
-          expect(result).toEqual({
+          expect(sut).toEqual({
             property1: 0,
           });
         });
@@ -72,9 +72,9 @@ describe("FEATURE: objectMapperUtilUtil", () => {
 
     describe("GIVEN: PROPERTIES_REFS has references without value processor function", () => {
       describe("WHEN: objectMapperUtil is called ", () => {
-        const result = objectMapperUtil(inputObject, PROPERTIES_REFS);
+        const sut = objectMapperUtil(inputObject, PROPERTIES_REFS);
         it("THEN: it should return the mapped object", () => {
-          expect(result).toEqual({
+          expect(sut).toEqual({
             property1: "output value",
           });
         });
